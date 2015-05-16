@@ -27,7 +27,7 @@ public abstract class Prompt<T> {
         return name;
     }
 
-    public String text(){
+    public String message(){
         return message;
     }
 
