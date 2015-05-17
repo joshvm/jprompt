@@ -21,7 +21,7 @@ public abstract class ObjectPrompt<T> extends Prompt<T> {
     public T prompt(final Scanner input){
         if(message != null)
             System.out.println(message);
-        return create(prompts.start(input));
+        return create(prompts.prompt(input));
     }
 
     protected boolean canRead(final Scanner input){

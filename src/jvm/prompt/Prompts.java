@@ -56,12 +56,12 @@ public class Prompts {
         prompts = new LinkedHashSet<>(Arrays.asList(ps));
     }
 
-    public Prompts prompt(final Prompt prompt){
+    public Prompts add(final Prompt prompt){
         prompts.add(prompt);
         return this;
     }
 
-    public Prompts unprompt(final Prompt prompt){
+    public Prompts remove(final Prompt prompt){
         prompts.remove(prompt);
         return this;
     }
@@ -70,7 +70,7 @@ public class Prompts {
         return prompts;
     }
 
-    public Result start(final Scanner input){
+    public Result prompt(final Scanner input){
         final Result result = new Result();
         prompts.forEach(p -> result.add(p, p.prompt(input)));
         return result;
